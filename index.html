@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body background="Falke.jpg">
+    <div class="conteiner">
+        <div class="header">
+            <div class="author">
+                <div class="info_box">
+                    <h2>Зверев Я.</h2>
+                    <img src="Kapibara.jpeg" width="95" height="84">
+                    <p>
+                        <span>Ожидаемая должность: Программист</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="skills">
+            <h3>О MNE</h3>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At velit fuga debitis necessitatibus optio ab
+                nostrum sit neque similique, laboriosam doloremque culpa aliquid. Beatae illum in, quasi iste inventore.
+                At.
+            </p>
+            <h3>Образование</h3>
+            <hr>
+
+            <p class="ok">
+
+                Зверев Ярослав:студент 3 курса МГТУ СТАНКИН
+            </p>
+            <h3>Опыт работы</h3>
+            <hr>
+            <p class="not-learned">
+                Зверев Ярослав:нет
+            </p>
+            <h3>Интересы</h3>
+            <hr>
+            <p class="ponti">
+
+                Зверев Ярослав: Любит есть
+            </p>
+            <h3>Контакты</h3>
+            <hr>
+            <ul class="contacts">
+                <li>
+                    <img src="Rehber.png" width="30" height="30" /><a
+                        href="mr.yaroslav.zverev@gmail.com">mr.yaroslav.zverev@gmail.com</a>
+                </li>
+                <li>
+                    <img src="Rehber.png" width="30" height="30" /><a href="tel:+1234567890">+1234567890</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <script>
+        function func1() {
+            if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
+                var name = prompt('Как вас зовут?', 'Введите сюда ваше имя');
+                var admin = name;
+                alert("Ваше имя - " + admin)
+            }
+            alert("Спасибо, что уделили время")
+        }
+    </script>
+
+    <script>
+        function func2() {
+            if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
+                while (true) {
+
+                    var age = prompt('ваш возраст?');
+                    if (confirm("Ваш возраст - " + age + " ?")) {
+                        alert("Спасибо, что уделили время")
+                        break
+                    }
+                    else {
+                        alert("Вы нажали кнопку отмена")
+                    }
+
+                }
+            }
+        }
+    </script>
+
+
+    <input type="text" id="newSurname" placeholder="Введите новую фамилию">
+    <button onclick="changeSurname()">Изменить фамилию</button>
+    <p>Текущая фамилия: <span id="surname">Зверев</span></p>
+
+    <script>
+        function changeSurname() {
+            var newSurname = document.getElementById("newSurname").value;
+            document.getElementById("surname").innerText = newSurname;
+        }
+    </script>
+
+    <title>JavaScript в HTML</title>
+    <script>
+        function areEqual() {
+            // Получаем значения из полей ввода
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+
+            // Проверяем, равны ли числа
+            var result = num1 === num2;
+
+            // Отображаем результат в окошке
+            document.getElementById("result").innerText = result ? "Числа равны" : "Числа не равны";
+        }
+
+    </script>
+
+    <h1 align="center" class="hover-text" style="font-size: 30px;">JavaScript</h1>
+    <h1>Проверка на равенство чисел</h1>
+    <label for="num1">Число 1:</label>
+    <input type="text" id="num1"><br><br>
+    <label for="num2">Число 2:</label>
+    <input type="text" id="num2"><br><br>
+    <button onclick="areEqual()">Проверить</button>
+    <div id="result"></div>
+
+    <div>
+        <p>Скрипты:</p>
+        <button onclick="func1()">Спросить имя</button>
+        <button onclick="func2()">Спросить возраст</button>
+    </div>
+</body>
+
+<style>
+    body {
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif, serif;
+    }
+
+    h1 {
+        color: #999999;
+    }
+
+    .ok {
+        color: green;
+    }
+
+    .learning-in-progress {
+        color: orange;
+    }
+
+    .ponti {
+        color: #fff;
+        font-size: 40;
+        /* font-stretch:expanded; */
+        text-shadow: 2px 2px red;
+        border: 2px solid red;
+        outline: green dotted thick;
+
+    }
+
+
+    .not-learned {
+        color: red;
+    }
+</style>
